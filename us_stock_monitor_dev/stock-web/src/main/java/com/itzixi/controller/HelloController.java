@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
 @ClassName HelloController
-@Author 风间影月
+@Author duqy
 @Version 1.0
 @Description HelloController
 **/
@@ -25,7 +25,7 @@ public class HelloController {
 
     @GetMapping("world")
     public String world() {
-        return "Hello 风间影月!";
+        return "Hello duqy!";
     }
 
 }

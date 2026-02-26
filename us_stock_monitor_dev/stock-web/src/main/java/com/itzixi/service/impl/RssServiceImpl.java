@@ -27,7 +27,7 @@ import java.util.List;
 
 /**
  * @ClassName RssServiceImpl
- * @Author 风间影月
+ * @Author duqy
  * @Version 1.0
  * @Description RssServiceImpl
  **/
@@ -159,7 +159,7 @@ public class RssServiceImpl implements RssService {
 
     /**
      * @Description: 处理股票标题
-     * @Author 风间影月
+     * @Author duqy
      * @param title
      * @return String
      */
@@ -170,7 +170,7 @@ public class RssServiceImpl implements RssService {
 
     /**
      * @Description: 处理股票代码
-     * @Author 风间影月
+     * @Author duqy
      * @param title
      * @return String
      */
@@ -185,7 +185,7 @@ public class RssServiceImpl implements RssService {
 
     /**
      * @Description: 从股票标签枚举中获取映射的中文标签（带有emoji）
-     * @Author 风间影月
+     * @Author duqy
      * @param list
      * @return String
      */

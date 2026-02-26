@@ -5,7 +5,7 @@ import com.itzixi.entity.USStockRss;
 
 /**
  * @ClassName USStockRssMapper
- * @Author 风间影月
+ * @Author duqy
  * @Version 1.0
  * @Description USStockRssMapper
  **/

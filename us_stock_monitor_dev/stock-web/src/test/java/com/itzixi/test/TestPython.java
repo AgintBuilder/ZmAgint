@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 
 /**
  * @ClassName TestPython
- * @Author 风间影月
+ * @Author duqy
  * @Version 1.0
  * @Description TestPython
  **/

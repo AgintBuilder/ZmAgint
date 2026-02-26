@@ -17,7 +17,7 @@ import java.util.Arrays;
 
 /**
  * @ClassName DingTalkGroupMessageUtils
- * @Author 风间影月
+ * @Author duqy
  * @Version 1.0
  * @Description DingTalkGroupMessageUtils
  **/
@@ -51,7 +51,7 @@ public class DingTalkGroupMessageUtils {
              */
             //定义文本内容
             OapiRobotSendRequest.Text text = new OapiRobotSendRequest.Text();
-            text.setContent("hello 风间影月，这是java代码调用的钉钉机器人所发送的消息~~~");
+            text.setContent("hello duqy，这是java代码调用的钉钉机器人所发送的消息~~~");
             //定义 @ 对象
             OapiRobotSendRequest.At at = new OapiRobotSendRequest.At();
             at.setAtUserIds(Arrays.asList(USER_ID));
