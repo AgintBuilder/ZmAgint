@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: us-stock-monitor-web
+  profiles:
+    active: dev
+
+logging:
+  level:
+    root: info
+
+# MyBatisPlus 的配置
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type:
+      update-strategy: not_empty
+  mapper-locations: classpath*:/mappers/*.xml
+
+baidu:
+  translate:
+    host: ${BAIDU_TRANSLATE_HOST}
+    appid: ${BAIDU_TRANSLATE_APPID}
+    securityKey: ${BAIDU_TRANSLATE_SECURITYKEY}
+
+dingding:
+  token: ${DINGDING_TOKEN}
+  secret: ${DINGDING_SECRET}
+  userid: ${DINGDING_USERID}
