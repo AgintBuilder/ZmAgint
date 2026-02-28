@@ -2,7 +2,7 @@ package com.itzixi.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.itzixi.entity.USStockRss;
-import com.itzixi.mapper.USStockRssMapper;
+import com.itzixi.mapper.USStockWebMapper;
 import com.itzixi.service.StockService;
 import jakarta.annotation.Resource;
 import org.springframework.stereotype.Service;
@@ -20,11 +20,11 @@ import java.time.format.DateTimeFormatter;
 public class StockServiceImpl implements StockService {
 
     @Resource
-    private USStockRssMapper usStockRssMapper;
+    private USStockWebMapper usStockWebMapper;
 
     @Override
     public void saveStockNews(USStockRss stockNews) {
-        usStockRssMapper.insert(stockNews);
+        usStockWebMapper.insert(stockNews);
     }
 
     @Override
@@ -34,7 +34,7 @@ public class StockServiceImpl implements StockService {
         queryWrapper.eq("stock_code", stockCode);
         queryWrapper.eq("link", link);
 
-        return usStockRssMapper.selectCount(queryWrapper) > 0;
+        return usStockWebMapper.selectCount(queryWrapper) > 0;
     }
 
     @Override
@@ -53,6 +53,6 @@ public class StockServiceImpl implements StockService {
         queryWrapper.ge("pub_date_gmt", startDateStr);
         queryWrapper.le("pub_date_gmt", endDateStr);
 
-        return usStockRssMapper.selectCount(queryWrapper);
+        return usStockWebMapper.selectCount(queryWrapper);
     }
 }

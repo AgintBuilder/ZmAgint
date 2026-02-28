@@ -25,11 +25,11 @@ public class DingTalkGroupMessageUtils {
 
 //    https://oapi.dingtalk.com/robot/send?access_token=
 
-    public static final String CUSTOM_ROBOT_TOKEN = "cd6489b7397bbbb5a44d1f9c0baf65b7c54f4550c57da591dc00ac3e3b29387d";
+    public static final String CUSTOM_ROBOT_TOKEN = "76b9d5cae72d7ab0546bca2a6f97ef1c27f2cbd39e6ea5765643dafa19292235";
 
     public static final String USER_ID= "<you need @ group user's userId>";
 
-    public static final String SECRET = "SEC7b8dd9bbc9f2b4aaafe88999a3c809fd4e667c17113f66186edabbcebf7a5cac";
+    public static final String SECRET = "SEC4989c402942af6c9b1b7e0be5ba57b45b639c02a446f98b868acd5783d752f48";
 
     public static void sendTextMessage() {
         try {
@@ -72,8 +72,8 @@ public class DingTalkGroupMessageUtils {
         }
     }
 
-//    public static void main(String[] args) {
-//        new DingTalkGroupMessageUtils().sendTextMessage();
-//    }
+    public static void main(String[] args) {
+        new DingTalkGroupMessageUtils().sendTextMessage();
+    }
 
 }

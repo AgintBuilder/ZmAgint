@@ -13,8 +13,8 @@ spring:
   mail:
     host: smtp.163.com                # 邮箱host
     port: 465                         # 邮箱固定端口
-    username: <your email address>
-    password: <your password>
+    username: duquan.yong@163.com
+    password: euiKFI89
     protocol: smtp                  # 邮箱协议
     default-encoding: UTF-8         # 默认编码
     properties:

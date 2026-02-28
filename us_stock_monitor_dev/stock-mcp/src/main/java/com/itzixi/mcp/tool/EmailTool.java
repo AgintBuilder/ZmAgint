@@ -11,7 +11,6 @@ import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.ai.tool.annotation.Tool;
 import org.springframework.ai.tool.annotation.ToolParam;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
@@ -31,10 +30,9 @@ public class EmailTool {
     private final JavaMailSender mailSender;
     private final String from;
 
-    @Autowired
-    public EmailTool(JavaMailSender mailSender, @Value("${spring.mail.username}") String from) {
+    public EmailTool(JavaMailSender mailSender, @Value("${spring.mail.username:#{null}}") String from) {
         this.mailSender = mailSender;
-        this.from = from;
+        this.from = from != null ? from : "";
     }
 
     @Data

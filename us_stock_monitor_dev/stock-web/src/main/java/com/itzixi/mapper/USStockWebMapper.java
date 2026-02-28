@@ -9,7 +9,7 @@ import com.itzixi.entity.USStockRss;
  * @Version 1.0
  * @Description USStockRssMapper
  **/
-public interface USStockRssMapper extends BaseMapper<USStockRss> {
+public interface USStockWebMapper extends BaseMapper<USStockRss> {
 
 
 

@@ -1,0 +1,20 @@
+
+services:
+  mysql:
+    image: mysql:9.5.0
+    container_name: mysql9-dqy-mysql
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mysql/log:/var/log/mysql
+      - ./mysql/data:/var/lib/mysql
+      - ./mysql/conf:/etc/mysql/conf.d
+      - ./mysql/mysql-files:/var/lib/mysql-files
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    restart: unless-stopped
+
+networks:
+  app-network:
+    driver: bridge
