@@ -71,6 +71,7 @@ public class DingTalkApi {
         try {
             Long timestamp = System.currentTimeMillis();
             System.out.println(timestamp);
+            System.out.println("===sendTextMessage====");
             String stringToSign = timestamp + "\n" + secret;
             Mac mac = Mac.getInstance("HmacSHA256");
             mac.init(new SecretKeySpec(secret.getBytes("UTF-8"), "HmacSHA256"));

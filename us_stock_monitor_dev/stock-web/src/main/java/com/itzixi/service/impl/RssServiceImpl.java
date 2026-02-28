@@ -144,7 +144,11 @@ public class RssServiceImpl implements RssService {
         }
 
         if (!stockMsgList.isEmpty()) {
-            dingTalkApi.sendTextMessage(dingTalkApi.formatStockInfoFromList(stockMsgList));
+            // 将消息列表按每10个一组拆分，避免单次发送消息过长
+            List<List<USStockMsg>> batchList = RssServiceImpl.splitList(stockMsgList);
+            for (List<USStockMsg> batch : batchList) {
+                dingTalkApi.sendTextMessage(dingTalkApi.formatStockInfoFromList(batch));
+            }
         }
 
     }
@@ -203,6 +207,29 @@ public class RssServiceImpl implements RssService {
         }
 
         return tagStr;
+    }
+
+    /**
+     * @Description: 将列表按指定大小拆分
+     * @Author duqy
+     * @param input 输入列表
+     * @return 拆分后的列表集合
+     */
+    public static <T> List<List<T>> splitList(List<T> input) {
+        List<List<T>> result = new ArrayList<>();
+        int size = input.size();
+
+        if (size <= 10) {
+            // 直接整体放进去
+            result.add(new ArrayList<>(input));
+        } else {
+            // 超过 10，就每 10 个拆分
+            for (int i = 0; i < size; i += 10) {
+                int end = Math.min(i + 10, size);
+                result.add(new ArrayList<>(input.subList(i, end)));
+            }
+        }
+        return result;
     }
 
 }
