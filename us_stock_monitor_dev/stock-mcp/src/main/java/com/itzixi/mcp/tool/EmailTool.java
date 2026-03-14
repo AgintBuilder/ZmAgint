@@ -52,7 +52,7 @@ public class EmailTool {
 
     @Tool(description = "查询老板的邮件/邮箱地址")
     public String getMyEmail() {
-        return "fatherfilm@163.com";
+        return "duquan.yong@163.com";
     }
 
     @Tool(description = "给指定的邮箱发送邮件信息，email 为收件人地址，subject 为邮件标题，content 为邮件的内容")

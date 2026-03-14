@@ -8,6 +8,7 @@ import com.itzixi.service.StockService;
 import jakarta.annotation.Resource;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -58,5 +59,22 @@ public class StockServiceImpl implements StockService {
     @Override
     public List<USStockRss> queryStockByTitleKeywords(List<String> titleKeywords) {
         return usStockRssMapper.queryStockByTitleKeywords(titleKeywords);
+    }
+
+    // ==================== stock-web 的方法（在 stock-mcp 中不支持） ====================
+
+    @Override
+    public void saveStockNews(USStockRss stockNews) {
+        throw new UnsupportedOperationException("stock-mcp 模块不支持此方法，请使用 stock-web 模块");
+    }
+
+    @Override
+    public Boolean isStockNewsExist(String stockCode, String link) {
+        throw new UnsupportedOperationException("stock-mcp 模块不支持此方法，请使用 stock-web 模块");
+    }
+
+    @Override
+    public Long getStockUnusualCounts(USStockRss stockNews, LocalDateTime startDate, LocalDateTime endDate) {
+        throw new UnsupportedOperationException("stock-mcp 模块不支持此方法，请使用 stock-web 模块");
     }
 }

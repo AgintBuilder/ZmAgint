@@ -9,7 +9,7 @@ import lombok.ToString;
  * @ClassName StockCounts
  * @Author duqy
  * @Version 1.0
- * @Description StockCounts
+ * @Description 股票异动次数统计实体类
  **/
 @Data
 @ToString

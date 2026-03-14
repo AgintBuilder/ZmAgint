@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
  * @ClassName USStockRss
  * @Author duqy
  * @Version 1.0
- * @Description USStockRss
+ * @Description 美股RSS新闻实体类
  **/
 @Data
 @ToString

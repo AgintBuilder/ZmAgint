@@ -81,5 +81,11 @@
             <optional>true</optional>
         </dependency>
 
+        <dependency>
+            <groupId>com.itzixi</groupId>
+            <artifactId>stock-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
     </dependencies>
 </project>

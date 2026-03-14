@@ -1,6 +1,7 @@
 package com.itzixi.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.itzixi.entity.StockCounts;
 import com.itzixi.entity.USStockRss;
 import com.itzixi.mapper.USStockWebMapper;
 import com.itzixi.service.StockService;
@@ -9,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
 
 /**
  * @ClassName StockServiceImpl
@@ -54,5 +56,27 @@ public class StockServiceImpl implements StockService {
         queryWrapper.le("pub_date_gmt", endDateStr);
 
         return usStockWebMapper.selectCount(queryWrapper);
+    }
+
+    // ==================== stock-mcp 的方法（在 stock-web 中不支持） ====================
+
+    @Override
+    public List<USStockRss> queryStock(String stockCode) {
+        throw new UnsupportedOperationException("stock-web 模块不支持此方法，请使用 stock-mcp 模块");
+    }
+
+    @Override
+    public List<USStockRss> queryStockBetweenDate(String stockCode, String startDate, String endDate) {
+        throw new UnsupportedOperationException("stock-web 模块不支持此方法，请使用 stock-mcp 模块");
+    }
+
+    @Override
+    public List<StockCounts> queryStockCountsBetweenDate(Integer targetCounts, String startDate, String endDate) {
+        throw new UnsupportedOperationException("stock-web 模块不支持此方法，请使用 stock-mcp 模块");
+    }
+
+    @Override
+    public List<USStockRss> queryStockByTitleKeywords(List<String> titleKeywords) {
+        throw new UnsupportedOperationException("stock-web 模块不支持此方法，请使用 stock-mcp 模块");
     }
 }
