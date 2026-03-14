@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find stock-web/src/main/java -name \"*.java\" -type f | xargs basename -a | sort)",
+      "Bash(find stock-mcp/src/main/java -name \"*.java\" -type f | xargs basename -a | sort)",
+      "Bash(mvn clean:*)",
+      "Bash(git add:*)"
+    ]
+  }
+}
