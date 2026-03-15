@@ -1,5 +1,11 @@
-# 使用 Eclipse Temurin JDK 21 作为基础镜像
-FROM eclipse-temurin:21-jre-alpine
+# 使用 Ubuntu 作为基础镜像，安装 OpenJDK 21
+FROM docker.1ms.run/ubuntu/squid:latest
+
+# 安装 OpenJDK 21
+RUN apt-get update && \
+    apt-get install -y openjdk-21-jre-headless && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
 
 # 设置工作目录
 WORKDIR /app
