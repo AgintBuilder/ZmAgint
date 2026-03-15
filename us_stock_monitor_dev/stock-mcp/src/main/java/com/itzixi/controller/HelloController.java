@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Description HelloController
 **/
 @RestController
-@RequestMapping("/hello")
+@RequestMapping("/")
 public class HelloController {
 
     /**
@@ -20,12 +20,9 @@ public class HelloController {
      * PUT
      * DELETE
      */
-
-    // http://127.0.0.1:8080/hello/world
-
     @GetMapping("/")
     public String world() {
-        return "Hello welcome!";
+        return "Hello mcp-service!";
     }
 
 }

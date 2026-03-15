@@ -17,3 +17,18 @@ spring:
       idle-timeout: 600000                    # 连接超时的最大时长（毫秒），超时则会被释放（retired）
       max-lifetime: 18000000                  # 连接池的最大生命时长（毫秒），超时则会被释放（retired）
       connection-test-query: SELECT 1
+
+  # Redis 配置
+  data:
+    redis:
+      host: 127.0.0.1
+      port: 6379
+      password:       # 如果没有密码留空
+      database: 0
+      timeout: 2000ms
+      lettuce:
+        pool:
+          max-active: 8
+          max-idle: 8
+          min-idle: 0
+          max-wait: 1000ms
